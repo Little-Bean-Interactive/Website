@@ -20,8 +20,8 @@
         <a href="https://steamcommunity.com/profiles/76561199850329243/" target="_blank" class="social-icon steam" aria-label="Steam">
           <i class="fab fa-steam"></i>
         </a>
-        <a href="https://twitter.com/littlebeaninteractive" target="_blank" class="social-icon twitter" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
+        <a href="https://x.com/littlebeaninteractive" target="_blank" class="social-icon x" aria-label="X (formerly Twitter)">
+          <img src="icons/x-logo.png" alt="X logo" class="x-logo">
         </a>
         <a href="https://www.instagram.com/littlebeaninteractive/" target="_blank" class="social-icon instagram" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
@@ -37,26 +37,34 @@
 
     <section class="contact-form">
       <h2>Contact Me</h2>
-      <p>
+      <p class="highlight">
         I read every message you send and will do my best to reply within a week. 
         Thank you for your patience and for reaching out!
       </p>
       <form id="contact-form">
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <div class="input-with-cat">
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
 
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <div class="input-with-cat">
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
 
         <label for="message">Your Message</label>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        <div class="textarea-with-cat">
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="cat-button">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
       </form>
     </section>
   </div>
 
-  <footer class="footer" style="text-align: center;">
+  <footer class="footer">
     <p>&copy; 2025 Little Bean Interactive. All rights reserved.</p>
   </footer>
 
