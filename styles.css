@@ -1,0 +1,119 @@
+/* Cat-themed styles */
+:root {
+    --primary: #FF9F1C;  /* Orange */
+    --secondary: #2EC4B6; /* Teal */
+    --dark: #011627;     /* Navy */
+    --light: #FDFFFC;   /* White */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('https://placekitten.com/1920/1080');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--dark);
+}
+
+.overlay {
+    background-color: rgba(253, 255, 252, 0.9);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cat-emoji {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: var(--dark);
+    background: var(--secondary);
+    padding: 0.8rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    background: var(--primary);
+}
+
+.contact-form {
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: var(--secondary);
+}
+
+footer {
+    margin-top: 2rem;
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+/* Cat animation */
+.cat {
+    font-size: 3rem;
+    animation: bounce 2s infinite;
+    display: inline-block;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
