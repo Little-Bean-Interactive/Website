@@ -105,76 +105,30 @@ social-links h2 {
     margin-bottom: 20px;
 }
 
-.cat-button {
-    background-color: brown;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    width: 100px;
-    height: 100px;
+.paw-links {
     text-align: center;
-    vertical-align: middle;
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    color: white;
-    font-weight: bold;
-    line-height: 100px;
-    font-size: 0.9em;
-    font-family: 'Roboto', sans-serif;
-}
-
-.cat-button:hover {
-    transform: translateY(-10px);
-}
-
-.cat-button .main-pad {
-    width: 60px;
-    height: 50px;
-    background-color: pink;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50% 50% 60% 60%;
-}
-
-.cat-button .toe-pad {
-    width: 20px;
-    height: 20px;
-    background-color: pink;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.cat-button .toe-pad1 {
-    top: 20px;
-    left: 20px;
-}
-
-.cat-button .toe-pad2 {
-    top: 10px;
-    left: 40px;
-}
-
-.cat-button .toe-pad3 {
-    top: 10px;
-    right: 40px;
-}
-
-.cat-button .toe-pad4 {
-    top: 20px;
-    right: 20px;
-}
-
-.cat-button .social-icon {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 25%;
-    left: 25%;
-    z-index: 2;
-    pointer-events: none;
-}
+    padding: 40px;
+  }
+  
+  .paw-link {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  
+  .paw-link:hover {
+    transform: scale(1.05);
+  }
+  
+  .paw-image {
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .attribution {
+    font-size: 12px;
+    margin-top: 10px;
+  }
 
 /* Footer */
 footer {
