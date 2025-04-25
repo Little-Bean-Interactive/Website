@@ -98,35 +98,109 @@ nav {
     padding: 40px 20px;
 }
 
-.social-links ul {
-    list-style: none;
-    padding: 0;
+.social-links h2 {
+    color: #444;
+    border-bottom: 2px solid #ffcccb;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-.social-links li {
-    margin: 10px 0;
+.cat-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.social-links a {
-    text-decoration: none;
-    color: #333;
+.cat-button {
+    display: inline-block;
+    background-color: #8b5e3c; /* Brown base for paw */
+    color: #fff;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 70px;
 }
 
-.social-links a:hover {
-    color: #ff69b4;
+/* Paw pads */
+.cat-button .pad {
+    position: absolute;
+    background-color: #ff99aa; /* Pink for paw pads */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cat-button .main-pad {
+    width: 50px;
+    height: 50px;
+    top: 25%;
+    left: 25%;
+}
+
+.cat-button .toe-pad {
+    width: 15px;
+    height: 15px;
+}
+
+.cat-button .toe-pad1 { top: 10%; left: 40%; }
+.cat-button .toe-pad2 { top: 20%; left: 20%; }
+.cat-button .toe-pad3 { top: 20%; right: 20%; }
+.cat-button .toe-pad4 { top: 10%; right: 40%; }
+
+.cat-button:hover {
+    background-color: #6e452c;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cat-button:hover .pad {
+    background-color: #ff6f85; /* Darker pink on hover */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #8b5e3c; /* Brown background */
+    color: #ffebcd; /* Light cream text */
+    position: relative;
+}
+
+.footer-content {
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 .footer-cat {
     margin-top: 10px;
+    width: 80px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-decoration {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
+    height: 30px;
+    background-color: #ff99aa; /* Pink decorative strip */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
