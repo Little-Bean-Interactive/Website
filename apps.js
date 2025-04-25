@@ -1,24 +1,25 @@
-// app.js
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  
+
   const button = form.querySelector('button');
   button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  
+
   try {
     const formData = new FormData(form);
-    const response = await fetch("https://formspree.io/f/myzwzypd", {
+    
+    const response = await fetch('https://formspree.io/f/myzwzypd', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
+        Accept: 'application/json'
       },
       body: JSON.stringify({
         name: formData.get('name'),
         email: formData.get('email'),
-        message: formData.get('message'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
       }),
     });
 

@@ -42,16 +42,20 @@
         Thank you for your patience and for reaching out!
       </p>
       <form id="contact-form">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
-
-        <button type="submit" class="cat-button">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        
+        <select name="subject" required>
+          <option value="">Select a Subject</option>
+          <option value="Ideas">Ideas</option>
+          <option value="Collab">Collab</option>
+          <option value="Bug Report">Bug Report</option>
+          <option value="Other">Other</option>
+        </select>
+      
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        
+        <button type="submit">
           <i class="fas fa-paper-plane"></i> Send Message
         </button>
       </form>
