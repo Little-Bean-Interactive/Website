@@ -3,37 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Little Bean Interactive - Cat-themed Game Development Company">
     <title>Little Bean Interactive</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="card">
-        <header>
+    <header>
+        <div class="logo-container">
+            <img src="cat-logo.png" alt="Little Bean Interactive Logo" class="logo">
             <h1>Little Bean Interactive</h1>
-            <p class="slogan">Indie games crafted with care, one bean at a time.</p>
-        </header>
-
-        <div class="social-links">
-            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
-            <a href="#" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
         </div>
+        <p class="tagline">Purr-fectly Crafted Games for Everyone!</p>
+    </header>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#games">Our Games</a></li>
+            <li><a href="#social">Social Links</a></li>
+        </ul>
+    </nav>
 
-        <form class="contact-form">
-            <h2>Get in touch</h2>
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+    <main>
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Little Bean Interactive, where we bring your favorite feline fantasies to life through imaginative and playful games. Our mission is to make gaming as delightful as a kitten's purr!</p>
+            <img src="happy-cat.png" alt="A cute happy cat" class="cute-cat">
+        </section>
+        
+        <section id="games" class="games">
+            <h2>Our Games</h2>
+            <p class="coming-soon">🐾 Coming Soon! Stay tuned for our purr-fectly crafted games! 🐾</p>
+        </section>
+        
+        <section id="social" class="social-links">
+            <h2>Connect with Us</h2>
+            <ul>
+                <li><a href="https://www.threads.net" target="_blank">Threads</a></li>
+                <li><a href="https://www.x.com" target="_blank">X</a></li>
+                <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                <li><a href="https://www.tiktok.com" target="_blank">TikTok</a></li>
+                <li><a href="https://store.steampowered.com" target="_blank">Steam</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Little Bean Interactive. All rights reserved.</p>
+            <p>Made with love and whiskers ❤️🐾</p>
+        </div>
+        <img src="footer-cat.png" alt="A cute footer cat" class="footer-cat">
+    </footer>
 </body>
 </html>
