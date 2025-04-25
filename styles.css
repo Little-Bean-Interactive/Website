@@ -1,9 +1,11 @@
-/* Cat-themed styles */
+/* Updated with your color palette */
 :root {
-    --primary: #FF9F1C;  /* Orange */
-    --secondary: #2EC4B6; /* Teal */
-    --dark: #011627;     /* Navy */
-    --light: #FDFFFC;   /* White */
+    --dark-red: #4F000B;     /* Rich burgundy */
+    --deep-red: #720026;     /* Wine red */
+    --blush: #CE4257;        /* Soft pink-red */
+    --coral: #FF7F51;        /* Vibrant coral */
+    --peach: #FF9B54;        /* Warm peach */
+    --light: #FFF8F0;        /* Added cream for contrast */
 }
 
 body {
@@ -16,59 +18,57 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    color: var(--dark);
+    color: var(--dark-red);
 }
 
 .overlay {
-    background-color: rgba(253, 255, 252, 0.9);
+    background-color: rgba(255, 248, 240, 0.92);
     padding: 2rem;
     margin: 2rem auto;
     max-width: 800px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px rgba(79, 0, 11, 0.2);
+    border: 2px solid var(--deep-red);
 }
 
 h1 {
-    color: var(--primary);
+    color: var(--deep-red);
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 155, 84, 0.3);
 }
 
 .subtitle {
-    color: var(--secondary);
+    color: var(--blush);
     font-size: 1.2rem;
     margin-bottom: 2rem;
-}
-
-.cat-emoji {
-    font-size: 2rem;
-    margin: 1rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 2rem 0;
 }
 
 .social-links a {
-    color: var(--dark);
-    background: var(--secondary);
-    padding: 0.8rem;
+    color: var(--light);
+    background: linear-gradient(to bottom right, var(--coral), var(--peach));
+    padding: 1rem;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: transform 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 3px 6px rgba(206, 66, 87, 0.3);
 }
 
 .social-links a:hover {
-    transform: scale(1.2);
-    background: var(--primary);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(206, 66, 87, 0.5);
 }
 
 .contact-form {
@@ -77,32 +77,38 @@ h1 {
 }
 
 .contact-form input, 
-.contact-form textarea, 
-.contact-form button {
+.contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     margin: 0.5rem 0;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--blush);
     border-radius: 8px;
     font-family: inherit;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .contact-form button {
-    background: var(--primary);
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: linear-gradient(to right, var(--deep-red), var(--blush));
     color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .contact-form button:hover {
-    background: var(--secondary);
+    background: linear-gradient(to right, var(--blush), var(--coral));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(206, 66, 87, 0.4);
 }
 
 footer {
-    margin-top: 2rem;
-    color: var(--dark);
+    margin-top: 3rem;
+    color: var(--deep-red);
     font-size: 0.9rem;
 }
 
@@ -111,9 +117,21 @@ footer {
     font-size: 3rem;
     animation: bounce 2s infinite;
     display: inline-block;
+    filter: drop-shadow(0 2px 4px rgba(79, 0, 11, 0.3));
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .overlay {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
 }

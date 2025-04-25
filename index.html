@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Bean Interactive</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="overlay">
         <h1>Little Bean Interactive</h1>
-        <p class="subtitle">Pawsitive digital solutions for you!</p>
+        <p class="subtitle">Where creativity meets purr-fection</p>
         
         <div class="cat">🐱</div>
         
         <div class="social-links">
-            <a href="https://twitter.com/yourhandle" target="_blank">🐦</a>
-            <a href="https://instagram.com/yourhandle" target="_blank">📸</a>
-            <a href="https://github.com/yourhandle" target="_blank">💻</a>
-            <a href="mailto:hello@littlebeaninteractive.com">✉️</a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/yourhandle" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:hello@littlebeaninteractive.com"><i class="fas fa-envelope"></i></a>
         </div>
         
         <div class="contact-form">
-            <h2>Contact Us</h2>
+            <h2>Let's Chat!</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message 🐾</button>
+                <textarea name="message" placeholder="Your purr-ject details..." rows="5" required></textarea>
+                <button type="submit"><i class="fas fa-paw"></i> Send Message</button>
             </form>
         </div>
         
         <footer>
-            &copy; <span id="year"></span> Little Bean Interactive | Made with ❤️ and 🐱
+            &copy; <span id="year"></span> Little Bean Interactive | 
+            <span style="color: var(--coral)">❤️</span> + 
+            <span style="color: var(--deep-red)">🐱</span>
         </footer>
     </div>
 
@@ -40,8 +43,16 @@
         document.getElementById('year').textContent = new Date().getFullYear();
         
         // Random cat emoji on load
-        const catEmojis = ['🐱', '🐈', '😺', '😸', '😹', '😻', '🙀', '🐾'];
+        const catEmojis = ['🐱', '🐈', '😺', '😸', '😹', '😻', '🙀', '🐾', '😽', '😼'];
         document.querySelector('.cat').textContent = catEmojis[Math.floor(Math.random() * catEmojis.length)];
+        
+        // Add slight rotation to cat emoji on hover
+        document.querySelector('.cat').addEventListener('mouseover', function() {
+            this.style.transform = 'rotate(10deg)';
+        });
+        document.querySelector('.cat').addEventListener('mouseout', function() {
+            this.style.transform = 'rotate(0)';
+        });
     </script>
 </body>
 </html>
