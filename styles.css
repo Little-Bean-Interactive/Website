@@ -7,8 +7,11 @@
     box-sizing: border-box;
   }
   
+  body, h1, h2, h3, h4, h5, h6, p, label, input, textarea, button {
+    font-family: 'Montserrat', sans-serif; /* Apply the same font as Little Bean Interactive */
+  }
+  
   body {
-    font-family: 'Poppins', sans-serif;
     background-color: #F4EDE4; /* Neutral light beige for background */
     color: #48392A; /* Dark text color */
     line-height: 1.6;
@@ -104,25 +107,6 @@
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
-  
-  .coming-soon {
-    background-color: #F96F5D; /* Vibrant coral */
-    color: #FFFFFF; /* White text for readability */
-    text-align: center;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    border: 2px solid #C06E52; /* Accent border */
-    margin-bottom: 20px;
-    border-radius: 8px; /* Adds a subtle rounded corner */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-
-  .coming-soon:hover {
-    transform: scale(1.05); /* Slightly enlarges on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
-  }
 
   .contact-form {
     background-color: #C06E52; /* Warm brownish-red */
@@ -136,7 +120,7 @@
   .contact-form h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #48392a; /* Darker accent color */
+    color: #43281C; /* Update contact me heading color */
     font-weight: 600;
   }
 
@@ -144,6 +128,7 @@
     color: #43281c; /* Dark text color */
     font-size: 1em;
     margin-bottom: 20px;
+    font-weight: bold; /* Make the paragraph text bold */
   }
   
   .contact-form form {
@@ -157,13 +142,13 @@
   .contact-form label {
     font-size: 1.1em;
     text-align: left;
-    color: #48392A; /* Updated label text color to match #48392A */
+    color: #43281C; /* Update label text color */
     font-weight: 600;
   }
   
   .contact-form input, 
   .contact-form textarea {
-    border: 2px solid #48392A; /* Updated border color to match #48392A */
+    border: 2px solid #43281C; /* Update input and textarea outline color */
     padding: 10px;
     font-size: 1em;
     border-radius: 5px;
@@ -180,7 +165,7 @@
   
   .contact-form button {
     padding: 10px;
-    background-color: #48392A; /* Dark button */
+    background-color: #43281C; /* Update button background color */
     color: #FFFFFF; /* White text */
     font-weight: bold;
     border: none;
