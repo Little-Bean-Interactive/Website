@@ -3,56 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Bean Interactive</title>
+    <title>Little Bean Interactive | Indie Game Studio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="overlay">
         <h1>Little Bean Interactive</h1>
-        <p class="subtitle">Where creativity meets purr-fection</p>
+        <p class="subtitle">Indie games crafted with care, one bean at a time.</p>
         
-        <div class="cat">🐱</div>
+        <div class="controller">🎮</div>
         
         <div class="social-links">
-            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/yourhandle" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:hello@littlebeaninteractive.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://itch.io/yourhandle" target="_blank" title="Itch.io"><i class="fas fa-gamepad"></i></a>
+            <a href="https://github.com/yourhandle" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:hello@littlebeaninteractive.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
         
         <div class="contact-form">
-            <h2>Let's Chat!</h2>
+            <h2>Get In Touch</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your purr-ject details..." rows="5" required></textarea>
-                <button type="submit"><i class="fas fa-paw"></i> Send Message</button>
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
             </form>
         </div>
         
         <footer>
             &copy; <span id="year"></span> Little Bean Interactive | 
-            <span style="color: var(--coral)">❤️</span> + 
-            <span style="color: var(--deep-red)">🐱</span>
+            Made with <span class="heart">♥</span> and pixels
         </footer>
     </div>
 
     <script>
         // Auto-update year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Random cat emoji on load
-        const catEmojis = ['🐱', '🐈', '😺', '😸', '😹', '😻', '🙀', '🐾', '😽', '😼'];
-        document.querySelector('.cat').textContent = catEmojis[Math.floor(Math.random() * catEmojis.length)];
-        
-        // Add slight rotation to cat emoji on hover
-        document.querySelector('.cat').addEventListener('mouseover', function() {
-            this.style.transform = 'rotate(10deg)';
-        });
-        document.querySelector('.cat').addEventListener('mouseout', function() {
-            this.style.transform = 'rotate(0)';
-        });
-    </script>
-</body>
-</html>
+        document.getElementById('year').textContent = new Date().getFullYear

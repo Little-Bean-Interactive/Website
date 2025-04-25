@@ -1,137 +1,203 @@
-/* Updated with your color palette */
+/* Main Color Palette */
 :root {
-    --dark-red: #4F000B;     /* Rich burgundy */
-    --deep-red: #720026;     /* Wine red */
-    --blush: #CE4257;        /* Soft pink-red */
-    --coral: #FF7F51;        /* Vibrant coral */
-    --peach: #FF9B54;        /* Warm peach */
-    --light: #FFF8F0;        /* Added cream for contrast */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--light);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-image: url('https://placekitten.com/1920/1080');
+    --deep-wine: #4F000B;       /* Rich burgundy */
+    --brand-red: #720026;       /* Primary brand color */
+    --soft-blush: #CE4257;      /* Accent pink-red */
+    --warm-coral: #FF7F51;      /* Call-to-action */
+    --creamy-peach: #FF9B54;    /* Highlights */
+    --light-cream: #FFF8F0;     /* Background */
+  }
+  
+  /* Game Developer Styling */
+  body {
+    font-family: 'Press Start 2P', cursive, 'Arial', sans-serif;
+    background-color: var(--light-cream);
+    background-image: 
+      linear-gradient(rgba(255,248,240,0.9), rgba(255,248,240,0.9)),
+      url('https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: var(--dark-red);
-}
-
-.overlay {
-    background-color: rgba(255, 248, 240, 0.92);
-    padding: 2rem;
-    margin: 2rem auto;
+    margin: 0;
+    color: var(--deep-wine);
+    line-height: 1.6;
+  }
+  
+  /* Pixel-inspired overlay */
+  .overlay {
+    background-color: rgba(255, 248, 240, 0.95);
+    border: 4px solid var(--brand-red);
+    border-radius: 8px;
+    box-shadow: 
+      8px 8px 0 var(--brand-red),
+      16px 16px 0 rgba(79, 0, 11, 0.2);
+    padding: 2.5rem;
+    margin: 3rem auto;
     max-width: 800px;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(79, 0, 11, 0.2);
-    border: 2px solid var(--deep-red);
-}
-
-h1 {
-    color: var(--deep-red);
+    position: relative;
+  }
+  
+  .overlay:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px dashed var(--warm-coral);
+    border-radius: 12px;
+    pointer-events: none;
+    animation: pulse 3s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    from { opacity: 0.3; }
+    to { opacity: 0.7; }
+  }
+  
+  h1 {
+    color: var(--brand-red);
+    font-size: 2.8rem;
+    margin-bottom: 0;
+    text-shadow: 3px 3px 0 var(--creamy-peach);
+    letter-spacing: -1px;
+  }
+  
+  .subtitle {
+    color: var(--soft-blush);
+    font-size: 1.4rem;
+    margin: 1rem 0 2rem;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .subtitle:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--warm-coral), var(--creamy-peach));
+  }
+  
+  /* Game controller instead of cat */
+  .controller {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(255, 155, 84, 0.3);
-}
-
-.subtitle {
-    color: var(--blush);
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.social-links {
+    margin: 1.5rem 0;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  /* Social links styled like game buttons */
+  .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.social-links a {
-    color: var(--light);
-    background: linear-gradient(to bottom right, var(--coral), var(--peach));
+    margin: 2.5rem 0;
+  }
+  
+  .social-links a {
+    color: white;
+    background: var(--brand-red);
     padding: 1rem;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s;
-    box-shadow: 0 3px 6px rgba(206, 66, 87, 0.3);
-}
-
-.social-links a:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 5px 15px rgba(206, 66, 87, 0.5);
-}
-
-.contact-form {
+    border: 3px solid var(--deep-wine);
+    box-shadow: 0 4px 0 var(--deep-wine);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-links a:hover {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--deep-wine);
+    background: var(--soft-blush);
+  }
+  
+  /* Contact form styled like game UI */
+  .contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid var(--brand-red);
+    border-radius: 8px;
+    padding: 2rem;
     margin: 2rem auto;
     max-width: 500px;
-}
-
-.contact-form input, 
-.contact-form textarea {
+    box-shadow: inset 0 0 10px rgba(206, 66, 87, 0.2);
+  }
+  
+  .contact-form h2 {
+    color: var(--brand-red);
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     margin: 0.5rem 0;
-    border: 2px solid var(--blush);
-    border-radius: 8px;
+    border: 2px solid var(--soft-blush);
+    border-radius: 4px;
     font-family: inherit;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.contact-form button {
+    background: white;
+  }
+  
+  .contact-form button {
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
-    background: linear-gradient(to right, var(--deep-red), var(--blush));
+    background: linear-gradient(to right, var(--warm-coral), var(--creamy-peach));
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.contact-form button:hover {
-    background: linear-gradient(to right, var(--blush), var(--coral));
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(206, 66, 87, 0.4);
-}
-
-footer {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid var(--brand-red);
+  }
+  
+  .contact-form button:hover {
+    background: linear-gradient(to right, var(--creamy-peach), var(--warm-coral));
+    transform: translateY(2px);
+    border-bottom-width: 2px;
+  }
+  
+  footer {
     margin-top: 3rem;
-    color: var(--deep-red);
-    font-size: 0.9rem;
-}
-
-/* Cat animation */
-.cat {
-    font-size: 3rem;
-    animation: bounce 2s infinite;
+    color: var(--brand-red);
+    font-size: 0.8rem;
+  }
+  
+  /* Pixel art heart */
+  .heart {
+    color: var(--soft-blush);
     display: inline-block;
-    filter: drop-shadow(0 2px 4px rgba(79, 0, 11, 0.3));
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .overlay {
-        margin: 1rem;
-        padding: 1.5rem;
-    }
+    transform: rotate(-15deg);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
     h1 {
-        font-size: 2.2rem;
+      font-size: 2rem;
     }
-}
+    .subtitle {
+      font-size: 1.1rem;
+    }
+    .overlay {
+      margin: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
