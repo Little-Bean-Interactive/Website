@@ -98,71 +98,82 @@ nav {
     padding: 40px 20px;
 }
 
-.social-links h2 {
+social-links h2 {
     color: #444;
     border-bottom: 2px solid #ffcccb;
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
-.cat-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
 .cat-button {
-    display: inline-block;
-    background-color: #8b5e3c; /* Brown base for paw */
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-decoration: none;
-    padding: 15px 20px;
+    background-color: brown;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    display: inline-block;
     position: relative;
     width: 100px;
     height: 100px;
     text-align: center;
-    line-height: 70px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+    line-height: 100px;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Paw pads */
-.cat-button .pad {
-    position: absolute;
-    background-color: #ff99aa; /* Pink for paw pads */
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.cat-button:hover {
+    transform: translateY(-10px);
 }
 
 .cat-button .main-pad {
-    width: 50px;
+    width: 60px;
     height: 50px;
-    top: 25%;
-    left: 25%;
+    background-color: pink;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 60% 60%;
 }
 
 .cat-button .toe-pad {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
 }
 
-.cat-button .toe-pad1 { top: 10%; left: 40%; }
-.cat-button .toe-pad2 { top: 20%; left: 20%; }
-.cat-button .toe-pad3 { top: 20%; right: 20%; }
-.cat-button .toe-pad4 { top: 10%; right: 40%; }
-
-.cat-button:hover {
-    background-color: #6e452c;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+.cat-button .toe-pad1 {
+    top: 20px;
+    left: 20px;
 }
 
-.cat-button:hover .pad {
-    background-color: #ff6f85; /* Darker pink on hover */
+.cat-button .toe-pad2 {
+    top: 10px;
+    left: 40px;
+}
+
+.cat-button .toe-pad3 {
+    top: 10px;
+    right: 40px;
+}
+
+.cat-button .toe-pad4 {
+    top: 20px;
+    right: 20px;
+}
+
+.cat-button .social-icon {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* Footer */
