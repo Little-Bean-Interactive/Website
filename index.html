@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Little Bean Interactive - Cat-themed Game Development Company">
-    <title>Little Bean Interactive</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LITTLE BEAN INTERACTIVE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
     <header>
-        <div class="logo-container">
-            <img src="cat-logo.png" alt="Little Bean Interactive Logo" class="logo">
-            <h1>Little Bean Interactive</h1>
-        </div>
-        <p class="tagline">Purr-fectly Crafted Games for Everyone!</p>
+      <h1><span class="little">LITTLE</span><span class="bean">BEAN</span><span class="interactive">INTERACTIVE</span></h1>
     </header>
-    
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#games">Our Games</a></li>
-            <li><a href="#social">Social Links</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>Welcome to Little Bean Interactive, where we bring your favorite feline fantasies to life through imaginative and playful games. Our mission is to make gaming as delightful as a kitten's purr!</p>
-            <img src="happy-cat.png" alt="A cute happy cat" class="cute-cat">
-        </section>
-        
-        <section id="games" class="games">
-            <h2>Our Games</h2>
-            <p class="coming-soon">Coming Soon! Stay tuned for our purr-fectly crafted games!</p>
-        </section>
-        
-        <section class="paw-links">
-            <a href="https://www.example.com" class="paw-link">
-              <img src="cat_paw.png" alt="Cat Paw Button" class="paw-image" />
-            </a>
-            <p class="attribution">
-              <a href="https://www.vecteezy.com/free-png/cat" target="_blank" rel="noopener noreferrer">
-                Cat PNGs by Vecteezy
-              </a>
-            </p>
-          </section>
-          
-          
-    </main>
-    
-    <footer>
-        <div class="footer-decoration"></div>
-        <div class="footer-content">
-            <p>&copy; 2025 Little Bean Interactive. All rights reserved.</p>
-            <p>Made with love and whiskers ❤️🐾</p>
-        </div>
-        <img src="footer-cat.png" alt="A cute footer cat" class="footer-cat">
-    </footer>
+    <section class="social-links">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" class="social-icon">Twitter</a>
+        <a href="https://facebook.com" target="_blank" class="social-icon">Facebook</a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">Instagram</a>
+      </div>
+    </section>
+
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
