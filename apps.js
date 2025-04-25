@@ -9,16 +9,16 @@ form.addEventListener('submit', async (event) => {
   
   try {
     const formData = new FormData(form);
-    const response = await fetch('/send-email', {
+    const response = await fetch("https://formspree.io/f/myzwzypd", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify({
         name: formData.get('name'),
         email: formData.get('email'),
         message: formData.get('message'),
-        forwardTo: 'dev@littlebeaninteractive.com'
       }),
     });
 
